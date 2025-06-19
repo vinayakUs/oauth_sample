@@ -10,3 +10,6 @@ spring:
       name: user
       password: password1
 
+rsa:
+  public-key: classpath:certs/public.pem
+  private-key: classpath:certs/private.pem
