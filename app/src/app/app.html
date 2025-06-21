@@ -1,0 +1,12 @@
+<div style="text-align: center;">
+
+  <div *ngIf="!oauthService.hasValidAccessToken()">
+    <button (click)="login()">Login</button>
+  </div>
+
+  <div *ngIf="oauthService.hasValidAccessToken()">
+    <p>You're logged in!</p>
+    <button (click)="logout()">Logout</button>
+    <pre>{{ getIdToken() | json }}</pre>
+  </div>
+</div>
